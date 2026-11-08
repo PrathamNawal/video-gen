@@ -3,8 +3,8 @@
 import { W, H, PAL, FONT, font, rgba, rr, bg, glow, grid, vignette, panel, caret, lightReveal, scramble, buf, flyPose, setAccent, clamp, lerp, seg, ss, eo, ei, eio, back } from './engine.js';
 
 FONT.disp = 'Inter'; FONT.mono = 'DejaVu Sans Mono';   // InterTight / JetBrains Mono are not installed here
-setAccent('#8B7CFF');                                    // one accent: electric violet
-export const DUR = 10;
+setAccent('#B7F34A');                                    // one accent: lime
+export const DUR = 20;
 const CX = W / 2;
 
 // ───────────────────────── content ─────────────────────────
@@ -24,20 +24,23 @@ const CHIPS = [
 ];
 
 // ───────────────────────── timing (shared with the score) ─────────────────────────
-const TYPE0 = 0.7, TYPE_DT = 0.075;                 // typing the name
-const HDR0 = 2.6, HDR1 = 3.2;                       // name collapses to header
-const FLY0 = i => 2.9 + i * 0.25, FLY_D = 0.5;      // tile flights
-const LAND = i => FLY0(i) + FLY_D;
+const TYPE0 = 0.4, TYPE_DT = 0.075;                 // typing the name
+const ROLE0 = 1.6, ROLE1 = 2.4;                     // role label light reveal
+const HDR0 = 4.1, HDR1 = 4.7;                       // name collapses to header
+const LANDS = [5.3, 8.55, 10.3, 12.7];              // tiles land as each number is spoken
+const FLY0 = i => LANDS[i] - 0.5, FLY_D = 0.5;
+const LAND = i => LANDS[i];
 const LOCK = (i, n) => 0.18 + 0.08 * n;             // digit lock offsets after landing
-const DIS0 = i => 6.0 + i * 0.1, DIS_D = 0.55;      // tiles put away
-const CHIP0 = i => 6.5 + i * 0.25;                  // chips arrive
-const OUT0 = i => 8.0 + i * 0.08;                   // chips put away
-const ICON0 = 8.7, NAME2 = 8.9, URL0 = 9.3;
+const DIS0 = i => 14.1 + i * 0.08, DIS_D = 0.5;     // tiles put away
+const CHIP0 = i => [14.95, 15.4, 15.85, 16.3][i];   // chips arrive as each company is spoken
+const OUT0 = i => 16.95 + i * 0.06;                 // chips put away
+const END0 = 16.9, ICON0 = 17.1, NAME2 = 17.3, URL0 = 18.7;
+export const VO = { l1: 1.3, a1: 4.75, a2: 7.95, b: 10.15, c: 12.5, d: 14.2, e: 17.2 };   // voice-over clip start times
 
 export const EVENTS = (() => {
   const ev = [];
   for (let i = 0; i < NAME.length; i++) ev.push({ t: TYPE0 + i * TYPE_DT, type: 'key', i });
-  ev.push({ t: 2.0, type: 'shimmer' });
+  ev.push({ t: ROLE0 + 0.2, type: 'shimmer' });
   ev.push({ t: HDR0, type: 'whoosh' });
   TILES.forEach((tl, i) => {
     ev.push({ t: FLY0(i), type: 'whoosh_s' });
@@ -51,7 +54,7 @@ export const EVENTS = (() => {
   ev.push({ t: ICON0, type: 'note', n: 72 });
   ev.push({ t: NAME2, type: 'chord', big: 1 });
   ev.push({ t: URL0, type: 'shimmer' });
-  for (let k = 0; k < 16; k++) { const t = 3.0 + k * 0.5; if (t < 7.9) ev.push({ t, type: 'pulse' }); }
+  for (let k = 0; k < 26; k++) { const t = 4.5 + k * 0.5; if (t < 16.9) ev.push({ t, type: 'pulse' }); }
   return ev.sort((a, b) => a.t - b.t);
 })();
 
@@ -69,7 +72,7 @@ function crt(p) { if (p >= 1) return null; const a = ei(seg(p, 0, 0.62)), b = ei
 // ───────────────────────── scene pieces ─────────────────────────
 function nameAndRole(g, t) {
   const hp = eio(seg(t, HDR0, HDR1));
-  const out = 1 - seg(t, 8.0, 8.3);                         // header leaves before the end card
+  const out = 1 - seg(t, 16.9, 17.2);                         // header leaves before the end card
   // measure at 150 px
   g.save(); g.font = font(150, 600); if (g.letterSpacing !== undefined) g.letterSpacing = `${-0.03 * 150}px`;
   const tw = g.measureText(NAME).width; g.restore();
@@ -83,7 +86,7 @@ function nameAndRole(g, t) {
   // caret rides the typing, then blinks, then dies as the header forms
   const typedW = n ? g.measureText(NAME.slice(0, n)).width : 0;
   const cOn = t < TYPE0 + NAME.length * TYPE_DT + 0.05 ? (t < TYPE0 ? blink(t) : 1) : blink(t);
-  const cA = 1 - seg(t, 2.4, 2.7);
+  const cA = 1 - seg(t, HDR0 - 0.2, HDR0 + 0.1);
   caret(g, -tw / 2 + typedW + 14, -52, 138, { on: cOn, alpha: cA * ss(seg(t, 0, 0.12)), wr: 1 / 11 });
   g.restore();
   // role label: light reveal in the centre, then it rides the header
@@ -92,12 +95,12 @@ function nameAndRole(g, t) {
   const lwd = g.measureText(ROLE).width; g.restore();
   const lcx = lerp(CX, 96 + lwd * 0.62 / 2, hp);
   g.save(); g.globalAlpha *= out;
-  if (t < 2.5) {
+  if (t < HDR0) {
     const [lc, lg] = buf('role', 1240, 64);
     lg.clearRect(0, 0, 1240, 64); lg.font = font(26, 500, 'mono'); lg.fillStyle = PAL.dim; lg.textAlign = 'center'; lg.textBaseline = 'middle';
     if (lg.letterSpacing !== undefined) lg.letterSpacing = '3.6px';
     lg.fillText(ROLE, 620 + 2, 33);
-    lightReveal(g, lc, CX - 620, 618 - 33, 1240, 64, seg(t, 1.75, 2.45), { base: 0.0, soft: 220, band: 70 });
+    lightReveal(g, lc, CX - 620, 618 - 33, 1240, 64, seg(t, ROLE0, ROLE1), { base: 0.0, soft: 220, band: 70 });
   } else {
     g.translate(lcx, ly); g.scale(lsc, lsc); g.font = font(26, 500, 'mono'); g.fillStyle = PAL.dim; g.textAlign = 'center'; g.textBaseline = 'middle';
     if (g.letterSpacing !== undefined) g.letterSpacing = '3.6px';
@@ -112,7 +115,10 @@ function tile(g, i, t) {
   const to = { x: x0 + (i % 2) * (tw + gap) + tw / 2, y: y0 + Math.floor(i / 2) * (th + gap) + th / 2, rot: 0, s: 1 };
   const fr = [{ x: -300, y: -200, rot: -0.25 }, { x: W + 300, y: -200, rot: 0.25 }, { x: -300, y: H + 200, rot: 0.2 }, { x: W + 300, y: H + 200, rot: -0.2 }][i];
   const p = seg(t, FLY0(i), FLY0(i) + FLY_D);
-  if (p <= 0) return;
+  if (p <= 0) {
+    if (t > HDR1 && t < DIS0(i)) { g.save(); g.globalAlpha = ss(seg(t, HDR1, HDR1 + 0.4)); g.strokeStyle = 'rgba(255,255,255,.07)'; g.lineWidth = 1.5; g.setLineDash([10, 10]); rr(g, to.x - tw / 2, to.y - th / 2, tw, th, 24); g.stroke(); g.restore(); }
+    return;
+  }
   const pose = flyPose({ ...fr, s: 1.1 }, to, p);
   const cr = crt(seg(t, DIS0(i), DIS0(i) + DIS_D));
   if (seg(t, DIS0(i), DIS0(i) + DIS_D) >= 1) return;
@@ -138,10 +144,10 @@ function tile(g, i, t) {
 
 function chips(g, t) {
   const cw = 390, chh = 250, gap = 36, x0 = 126, cy = 490, lineY = 710, x1 = x0 + 4 * cw + 3 * gap;
-  if (t < CHIP0(0) - 0.2 || t > 8.7) return;
+  if (t < CHIP0(0) - 0.3 || t > 17.9) return;
   // timeline hairline with an accent-lit progress segment
-  const lineA = ss(seg(t, 6.35, 6.6)) * (1 - seg(t, 8.0, 8.4));
-  const prog = ss(seg(t, 6.5, 7.6));
+  const lineA = ss(seg(t, CHIP0(0) - 0.2, CHIP0(0) + 0.1)) * (1 - seg(t, OUT0(0), OUT0(0) + 0.4));
+  const prog = ss(seg(t, CHIP0(0), CHIP0(3) + 0.3));
   g.save(); g.globalAlpha *= lineA;
   g.fillStyle = 'rgba(255,255,255,.10)'; g.fillRect(x0, lineY, x1 - x0, 2);
   g.fillStyle = PAL.accent; g.shadowColor = rgba(PAL.accent, 0.8); g.shadowBlur = 14; g.fillRect(x0, lineY, (x1 - x0) * prog, 2); g.shadowColor = 'transparent';
@@ -170,23 +176,23 @@ function chips(g, t) {
     g.restore();
   });
   // caption under the line
-  const ca = ss(seg(t, 7.4, 7.7)) * (1 - seg(t, 8.0, 8.3));
+  const ca = ss(seg(t, CHIP0(3), CHIP0(3) + 0.3)) * (1 - seg(t, OUT0(0), OUT0(0) + 0.3));
   text(g, '7+ YEARS  ·  PAYMENTS  ·  FINTECH  ·  E-COMMERCE', CX, 810, 22, 500, PAL.dim, { align: 'center', fam: 'mono', track: 0.18, alpha: ca });
 }
 
 function sectionTag(g, t) {
-  const a = ss(seg(t, 3.0, 3.3)) * (1 - seg(t, 5.9, 6.1));
+  const a = ss(seg(t, HDR1, HDR1 + 0.3)) * (1 - seg(t, 14.0, 14.2));
   text(g, 'PAYPAL  ·  AI/ML PLATFORM', W - 96, 120, 20, 500, PAL.mute, { align: 'right', fam: 'mono', track: 0.16, alpha: a });
-  const b = ss(seg(t, 6.3, 6.6)) * (1 - seg(t, 8.0, 8.3));
+  const b = ss(seg(t, 14.6, 14.9)) * (1 - seg(t, 16.9, 17.2));
   text(g, 'CAREER', W - 96, 120, 20, 500, PAL.mute, { align: 'right', fam: 'mono', track: 0.16, alpha: b });
 }
 
 function endCard(g, t) {
-  if (t < 8.5) return;
+  if (t < END0) return;
   // lone caret first, then it becomes the mark
   const s = 150, cxm = CX, cym = 380;
   const pi = seg(t, ICON0, ICON0 + 0.4), k = back(pi, 1.6);
-  const c0 = t < ICON0 ? ss(seg(t, 8.45, 8.55)) * blink(t) : 0;
+  const c0 = t < ICON0 ? ss(seg(t, END0, END0 + 0.1)) * blink(t) : 0;
   if (c0 > 0) caret(g, cxm, cym, 96, { on: c0, wr: 1 / 11 });
   if (pi > 0) {
     g.save(); g.translate(cxm, cym); g.scale(k, k);

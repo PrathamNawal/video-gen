@@ -48,9 +48,22 @@ for e in ev:
 t = tt(DUR + 0.5); bed = sum(np.sin(2*np.pi*hz(m)*t + k) for k, m in enumerate([36, 43, 48])) * 0.05
 env = np.clip(t/1.5, 0, 1) * (0.5 + 0.5*np.clip((t-8.5)/1.0, 0, 1))
 L += bed * env; R += bed * env
-# fade tail, normalise to about -14 LUFS-ish peak headroom
+# fade tail, normalise the music bed
 fade = np.clip((DUR + 0.5 - t) / 0.6, 0, 1); L *= fade; R *= fade
-pk = max(np.abs(L).max(), np.abs(R).max()); g = 0.85 / pk
-out = (np.stack([L, R], 1) * g * 32767).astype('<i2')
+pk = max(np.abs(L).max(), np.abs(R).max()); L *= 0.55 / pk; R *= 0.55 / pk
+# voice-over: clips placed at VO start times (voice/*.48k.wav, mono), music ducks ~9 dB under speech
+import subprocess, os
+vo = np.zeros(N); starts = d['vo']
+for k, t0 in starts.items():
+    f = f'voice/{k}.48k.wav'
+    if not os.path.exists(f): subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', f'voice/{k}.wav', '-ar', str(SR), '-ac', '1', f], check=True)
+    w = wave.open(f); x = np.frombuffer(w.readframes(w.getnframes()), '<i2').astype(float) / 32768
+    i = int(t0 * SR); n = min(len(x), N - i); vo[i:i+n] += x[:n]
+vo *= 0.8 / np.abs(vo).max()
+act = (np.abs(vo) > 0.02).astype(float); k = int(0.25 * SR)
+duck = np.convolve(act, np.ones(k) / k, 'same'); duck = np.clip(duck * 3, 0, 1); duck = np.convolve(duck, np.ones(int(0.12*SR)) / int(0.12*SR), 'same')
+g = 1 - 0.65 * duck
+L = L * g + vo; R = R * g + vo
+out = (np.clip(np.stack([L, R], 1), -1, 1) * 32767).astype('<i2')
 with wave.open('score.wav', 'wb') as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(out.tobytes())
-print('score.wav ok, peak scale', round(g, 2))
+print('score.wav ok (music + voice-over)')
