@@ -1,0 +1,137 @@
+{
+ "segments": [
+  {
+   "id": 1,
+   "scene": "T01_cold_open",
+   "caption": "April 2nd, 2011. Wankhede Stadium, Mumbai.",
+   "vo": "April second, twenty eleven. Wankhede Stadium, Mumbai.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 2,
+   "scene": "T01_cold_open",
+   "caption": "Twenty-eight years of waiting end with one swing of the bat.",
+   "vo": "Twenty-eight years of waiting end with one swing of the bat.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 3,
+   "scene": "T01_cold_open",
+   "caption": "A six over long-on. He finishes unbeaten on ninety-one.",
+   "vo": "A six over long-on. He finishes unbeaten on ninety-one.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 4,
+   "scene": "T01_cold_open",
+   "caption": "This is the story of Mahendra Singh Dhoni.",
+   "vo": "This is the story of Mahendra Singh Dhoni.",
+   "gap_after": 1.2
+  },
+  {
+   "id": 5,
+   "scene": "T02_ranchi",
+   "caption": "It starts in Ranchi, in 1981, with a pump operator's son.",
+   "vo": "It starts in Ranchi, in nineteen eighty-one, with a pump operator's son.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 6,
+   "scene": "T02_ranchi",
+   "caption": "At school he is a football goalkeeper, until a coach hands him wicketkeeping gloves.",
+   "vo": "At school he is a football goalkeeper, until a coach hands him wicketkeeping gloves.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 7,
+   "scene": "T02_ranchi",
+   "caption": "In 2001, he is collecting tickets at Kharagpur railway station.",
+   "vo": "In two thousand and one, he is collecting tickets at Kharagpur railway station.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 8,
+   "scene": "T02_ranchi",
+   "caption": "Evenings and weekends, he keeps hitting sixes.",
+   "vo": "Evenings and weekends, he keeps hitting sixes.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 9,
+   "scene": "T03_debut",
+   "caption": "December 23rd, 2004. His first match for India, against Bangladesh.",
+   "vo": "December twenty-third, two thousand four. His first match for India, against Bangladesh.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 10,
+   "scene": "T03_debut",
+   "caption": "He is run out for nought.",
+   "vo": "He is run out for nought.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 11,
+   "scene": "T03_debut",
+   "caption": "Four months later, he hits a hundred and forty-eight against Pakistan.",
+   "vo": "Four months later, he hits a hundred and forty-eight against Pakistan.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 12,
+   "scene": "T03_debut",
+   "caption": "Then in Jaipur, one hundred and eighty-three not out. A record for a wicketkeeper.",
+   "vo": "Then in Jaipur, one hundred and eighty-three not out. A record for a wicketkeeper.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 13,
+   "scene": "T04_captain",
+   "caption": "In 2007, he captains a young team at the first World Twenty20.",
+   "vo": "In two thousand and seven, he captains a young team at the first World Twenty twenty.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 14,
+   "scene": "T04_captain",
+   "caption": "The final against Pakistan comes down to the last over.",
+   "vo": "The final against Pakistan comes down to the last over.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 15,
+   "scene": "T04_captain",
+   "caption": "India win by five runs.",
+   "vo": "India win by five runs.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 16,
+   "scene": "T04_captain",
+   "caption": "Then the 2013 Champions Trophy. No other captain has won all three.",
+   "vo": "Then the two thousand and thirteen Champions Trophy. No other captain has won all three.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 17,
+   "scene": "T05_close",
+   "caption": "On August 15th, 2020, he retires with an Instagram video.",
+   "vo": "On August fifteenth, twenty twenty, he retires with an Instagram video.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 18,
+   "scene": "T05_close",
+   "caption": "Three hundred and fifty one-day games. Over ten thousand runs.",
+   "vo": "Three hundred and fifty one-day games. Over ten thousand runs.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 19,
+   "scene": "T05_close",
+   "caption": "The ticket collector from Ranchi who finished a World Cup with a six.",
+   "vo": "The ticket collector from Ranchi who finished a World Cup with a six.",
+   "gap_after": 1.0
+  }
+ ]
+}
