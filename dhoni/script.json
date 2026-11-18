@@ -1,0 +1,176 @@
+{
+ "title": "Captain Cool",
+ "takes": [
+  {
+   "take": "T01_cold_open",
+   "lines": [
+    {
+     "id": 1,
+     "text": "April 2nd, 2011. Wankhede Stadium, Mumbai.",
+     "spoken": "April second, twenty eleven. Wankhede Stadium, Mumbai.",
+     "hero": "the date, set big; then the map pin on Mumbai",
+     "typed": "APRIL 2, 2011 · MUMBAI"
+    },
+    {
+     "id": 2,
+     "text": "Twenty-eight years of waiting end with one swing of the bat.",
+     "spoken": "Twenty-eight years of waiting end with one swing of the bat.",
+     "hero": "a counter rolls up under the pin",
+     "typed": "28 YEARS"
+    },
+    {
+     "id": 3,
+     "text": "A six over long-on. He finishes unbeaten on ninety-one.",
+     "spoken": "A six over long-on. He finishes unbeaten on ninety-one.",
+     "hero": "the World Cup final photo lands; score counter",
+     "typed": "91*"
+    },
+    {
+     "id": 4,
+     "text": "This is the story of Mahendra Singh Dhoni.",
+     "spoken": "This is the story of Mahendra Singh Dhoni.",
+     "hero": "pen circle round him; name bar; title after the line",
+     "typed": "title CAPTAIN COOL (name shown on a photo caption, not typed)",
+     "gap_after": 1.2
+    }
+   ]
+  },
+  {
+   "take": "T02_ranchi",
+   "lines": [
+    {
+     "id": 5,
+     "text": "It starts in Ranchi, in 1981, with a pump operator's son.",
+     "spoken": "It starts in Ranchi, in nineteen eighty-one, with a pump operator's son.",
+     "hero": "string from the final photo to Ranchi on the map; boyhood portrait",
+     "typed": "RANCHI · 1981"
+    },
+    {
+     "id": 6,
+     "text": "At school he is a football goalkeeper, until a coach hands him wicketkeeping gloves.",
+     "spoken": "At school he is a football goalkeeper, until a coach hands him wicketkeeping gloves.",
+     "hero": "school-era card: goalkeeper to wicketkeeper",
+     "typed": "GOALKEEPER → WICKETKEEPER"
+    },
+    {
+     "id": 7,
+     "text": "In 2001, he is collecting tickets at Kharagpur railway station.",
+     "spoken": "In two thousand and one, he is collecting tickets at Kharagpur railway station.",
+     "hero": "string to Kharagpur on the map; a typeset railway ticket",
+     "typed": "KHARAGPUR · ticket TICKET COLLECTOR"
+    },
+    {
+     "id": 8,
+     "text": "Evenings and weekends, he keeps hitting sixes.",
+     "spoken": "Evenings and weekends, he keeps hitting sixes.",
+     "hero": "the ticket dims; a cricket bat photo takes the spotlight",
+     "typed": ""
+    }
+   ]
+  },
+  {
+   "take": "T03_debut",
+   "lines": [
+    {
+     "id": 9,
+     "text": "December 23rd, 2004. His first match for India, against Bangladesh.",
+     "spoken": "December twenty-third, two thousand four. His first match for India, against Bangladesh.",
+     "hero": "string from Kharagpur to Chattogram; date label",
+     "typed": "DEC 23, 2004 · DEBUT"
+    },
+    {
+     "id": 10,
+     "text": "He is run out for nought.",
+     "spoken": "He is run out for nought.",
+     "hero": "stamp slams on 'out'",
+     "typed": "stamp RUN OUT · 0"
+    },
+    {
+     "id": 11,
+     "text": "Four months later, he hits a hundred and forty-eight against Pakistan.",
+     "spoken": "Four months later, he hits a hundred and forty-eight against Pakistan.",
+     "hero": "counter rolls to 148 beside the zero",
+     "typed": "148"
+    },
+    {
+     "id": 12,
+     "text": "Then in Jaipur, one hundred and eighty-three not out. A record for a wicketkeeper.",
+     "spoken": "Then in Jaipur, one hundred and eighty-three not out. A record for a wicketkeeper.",
+     "hero": "counter 183* replaces 148; Jaipur pin; record stamp",
+     "typed": "183* · stamp RECORD"
+    }
+   ]
+  },
+  {
+   "take": "T04_captain",
+   "lines": [
+    {
+     "id": 13,
+     "text": "In 2007, he captains a young team at the first World Twenty20.",
+     "spoken": "In two thousand and seven, he captains a young team at the first World Twenty twenty.",
+     "hero": "route to Johannesburg on the map; trophy card",
+     "typed": "2007 · WORLD T20"
+    },
+    {
+     "id": 14,
+     "text": "The final against Pakistan comes down to the last over.",
+     "spoken": "The final against Pakistan comes down to the last over.",
+     "hero": "scoreboard card: last over",
+     "typed": "INDIA vs PAKISTAN"
+    },
+    {
+     "id": 15,
+     "text": "India win by five runs.",
+     "spoken": "India win by five runs.",
+     "hero": "counter 5 RUNS; stamp WON",
+     "typed": "5 RUNS · stamp WON"
+    },
+    {
+     "id": 16,
+     "text": "Then the 2013 Champions Trophy. No other captain has won all three.",
+     "spoken": "Then the two thousand and thirteen Champions Trophy. No other captain has won all three.",
+     "hero": "three trophy cards line up and glow",
+     "typed": "WORLD CUP · WORLD T20 · CHAMPIONS TROPHY"
+    }
+   ]
+  },
+  {
+   "take": "T05_close",
+   "lines": [
+    {
+     "id": 17,
+     "text": "On August 15th, 2020, he retires with an Instagram video.",
+     "spoken": "On August fifteenth, twenty twenty, he retires with an Instagram video.",
+     "hero": "date label; phone-screen card",
+     "typed": "AUG 15, 2020"
+    },
+    {
+     "id": 18,
+     "text": "Three hundred and fifty one-day games. Over ten thousand runs.",
+     "spoken": "Three hundred and fifty one-day games. Over ten thousand runs.",
+     "hero": "two counters roll up",
+     "typed": "350 ODIs · 10,000+ RUNS"
+    },
+    {
+     "id": 19,
+     "text": "The ticket collector from Ranchi who finished a World Cup with a six.",
+     "spoken": "The ticket collector from Ranchi who finished a World Cup with a six.",
+     "hero": "camera pulls back over the whole board; ticket and final photo glow together",
+     "typed": ""
+    }
+   ]
+  }
+ ],
+ "fact_notes": [
+  "Born July 7, 1981, Ranchi (then Bihar, now Jharkhand); father Pan Singh, pump operator at MECON: commonly cited (ESPNcricinfo, biographies).",
+  "School football goalkeeper moved to wicketkeeping by a coach: widely reported; coach name omitted.",
+  "Ticket collector (TTE) with South Eastern Railway at Kharagpur, c. 2001-2003: widely reported; years approximate.",
+  "ODI debut Dec 23, 2004 vs Bangladesh at Chattogram, run out for 0: ESPNcricinfo scorecard.",
+  "148 vs Pakistan, Visakhapatnam, April 2005 (about four months after debut); 183* vs Sri Lanka, Jaipur, Oct 31, 2005, then the highest score by a wicketkeeper in ODIs: ESPNcricinfo.",
+  "2007 World Twenty20, South Africa: India captained by Dhoni, beat Pakistan in the final by 5 runs (Sept 24, 2007, Johannesburg).",
+  "2011 World Cup final, Wankhede, April 2, 2011: India beat Sri Lanka by 6 wickets; Dhoni 91 not out, winning six over long-on; India's previous title 1983 (28 years).",
+  "2013 Champions Trophy won in England; Dhoni commonly cited as the only captain to win World Cup, World T20 and Champions Trophy.",
+  "Retired from international cricket Aug 15, 2020 via Instagram video.",
+  "350 ODIs, 10,773 runs: ESPNcricinfo career stats. Verify all against a live source before final."
+ ]
+}

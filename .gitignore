@@ -1,0 +1,12 @@
+dhoni/out/probe/
+dhoni/out/chunks/
+dhoni/out/burn/
+dhoni/out/*.png
+dhoni/out/final.mp4
+dhoni/out/final_captions.mp4
+dhoni/audio/takes/
+dhoni/audio/lines/
+dhoni/audio/trimmed/
+dhoni/assets/prep/
+__pycache__/
+*.pyc
