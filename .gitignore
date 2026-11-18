@@ -8,3 +8,5 @@ dhoni/audio/takes/
 dhoni/audio/lines/
 dhoni/audio/trimmed/
 dhoni/assets/prep/
+__pycache__/
+*.pyc
