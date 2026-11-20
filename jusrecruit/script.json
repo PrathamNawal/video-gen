@@ -1,0 +1,67 @@
+{
+ "title": "Your ATS Should Do More",
+ "takes": [
+  {"take": "T01_problem", "lines": [
+   {"id": 1, "text": "Your applicant tracking system tracks every candidate.",
+    "spoken": "Your applicant tracking system tracks every candidate.",
+    "hero": "a pipeline card: ATS, stages filling up", "typed": "THE ATS"},
+   {"id": 2, "text": "And your recruiters still do the work by hand.",
+    "spoken": "And your recruiters still do the work by hand.",
+    "hero": "pile of applications; stamp MANUAL", "typed": "STILL MANUAL", "gap_after": 0.8},
+   {"id": 3, "text": "Hundreds of applicants. Hundreds of identical phone screens.",
+    "spoken": "Hundreds of applicants. Hundreds of identical phone screens.",
+    "hero": "card: PHONE SCREENS stacking up", "typed": "SCREENING"}
+  ]},
+  {"take": "T02_reveal", "lines": [
+   {"id": 4, "text": "JusRecruit is an Agentic ATS.",
+    "spoken": "JusRecruit is an Agentic ATS.",
+    "hero": "the product name, set big", "typed": "JUSRECRUIT", "gap_after": 0.8},
+   {"id": 5, "text": "The AI does the screening and the first-round interviews.",
+    "spoken": "The AI does the screening and the first-round interviews.",
+    "hero": "two cards: PHONE SCREEN, AI INTERVIEW", "typed": "AI PHONE SCREEN · AI INTERVIEW"},
+   {"id": 6, "text": "Your team keeps the pipeline, and every final decision.",
+    "spoken": "Your team keeps the pipeline, and every final decision.",
+    "hero": "pipeline card; stamp DECIDED BY YOU", "typed": "YOU DECIDE"}
+  ]},
+  {"take": "T03_proofs", "lines": [
+   {"id": 7, "text": "The phone screener calls every applicant, any hour, in their language.",
+    "spoken": "The phone screener calls every applicant, any hour, in their language.",
+    "hero": "card: AI PHONE SCREEN, counter 24/7", "typed": "24/7"},
+   {"id": 8, "text": "Its setup takes under five minutes.",
+    "spoken": "Its setup takes under five minutes.",
+    "hero": "counter: under 5 min", "typed": "< 5 MIN"},
+   {"id": 9, "text": "Meet Sai and Aina, your AI interviewers.",
+    "spoken": "Meet Sai and Aina, your AI interviewers.",
+    "hero": "two name cards, Sai and Aina", "typed": "SAI · AINA"},
+   {"id": 10, "text": "They adapt every question, then hand back a score out of one hundred.",
+    "spoken": "They adapt every question, then hand back a score out of one hundred.",
+    "hero": "scorecard; number rolls up to 100", "typed": "SCORE / 100"},
+   {"id": 11, "text": "With a full transcript, and a replay.",
+    "spoken": "With a full transcript, and a replay.",
+    "hero": "scorecard: transcript and replay rows", "typed": "TRANSCRIPT · REPLAY"}
+  ]},
+  {"take": "T04_close", "lines": [
+   {"id": 12, "text": "Job post to offer letter, in one place.",
+    "spoken": "Job post to offer letter, in one place.",
+    "hero": "arrow draws from JOB POST to OFFER LETTER", "typed": "JOB POST → OFFER", "gap_after": 0.8},
+   {"id": 13, "text": "Start free. Post unlimited jobs.",
+    "spoken": "Start free. Post unlimited jobs.",
+    "hero": "price card: FREE", "typed": "START FREE"},
+   {"id": 14, "text": "Your ATS should do more than track candidates.",
+    "spoken": "Your ATS should do more than track candidates.",
+    "hero": "pull back: the whole board; closing title", "typed": "JUSRECRUIT.COM"}
+  ]}
+ ],
+ "fact_notes": [
+  "Source for all lines: jusrecruit.com home, /about, /ai-phone-screening, /ai-interviews, /pricing, read 2026-11-20.",
+  "L1-3: home page problem section: 'Your ATS Tracks the Work. Your Recruiters Still Do It'; 'Too Many Applications'; 'First-Round Screening Takes Hours'. 'Hundreds of applicants... hundreds of manual screening calls' is the site's own wording on /ai-phone-screening.",
+  "L4-6: home/about: JusRecruit is an Agentic ATS; AI does phone screening and first-round interviews; 'Recruiters and hiring teams remain responsible for final hiring decisions.'",
+  "L7: /ai-phone-screening: AI voice agent that calls every applicant; '24/7'; multiple interview languages.",
+  "L8: /ai-phone-screening stat '< 5 min to set up automated screening' (site claim).",
+  "L9-11: /ai-interviews and home: Sai and Aina are the AI interviewers; adaptive questions; 'overall candidate score out of 100'; full conversation, transcript and recorded-interview replay.",
+  "L12: home: ATS includes job posting, candidate management, documents and offer letters.",
+  "L13: /pricing: 'posting unlimited jobs and using the lightweight ATS is free forever'; 14-day free trial of full platform. NOTE: not stating a price; paid plan prices were not read.",
+  "Stats on the site (3x faster hiring, 90% satisfaction, 100% bias reduction, 85% manual time saved, 10K+ AI interviews, 92% role fit) are marketing claims with no methodology; deliberately left out of the script. Say if you want any included, attributed as the company's own claims.",
+  "Company: product of HTH Technolabs Pvt Ltd, Bengaluru. 'Trusted by 500+ clients' is the site's claim; not used."
+ ]
+}
