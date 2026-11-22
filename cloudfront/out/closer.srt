@@ -1,0 +1,159 @@
+1
+00:00:00,900 --> 00:00:02,358
+You press play in Mumbai.
+
+2
+00:00:02,358 --> 00:00:04,940
+The video lives on a server in Virginia.
+
+3
+00:00:04,990 --> 00:00:07,784
+That is almost thirteen thousand kilometres away.
+
+4
+00:00:07,984 --> 00:00:09,881
+Even at the speed of light in fibre,
+
+5
+00:00:09,881 --> 00:00:11,914
+the round trip takes over a tenth of a
+
+6
+00:00:11,914 --> 00:00:12,570
+second.
+
+7
+00:00:12,770 --> 00:00:15,900
+Amazon CloudFront exists to shorten that trip.
+
+8
+00:00:16,450 --> 00:00:17,637
+The idea is simple.
+
+9
+00:00:17,637 --> 00:00:19,379
+Do not make the file travel.
+
+10
+00:00:19,379 --> 00:00:21,291
+Put a copy near the viewer.
+
+11
+00:00:21,491 --> 00:00:22,677
+In two thousand eight,
+
+12
+00:00:22,677 --> 00:00:25,957
+CloudFront launched with fourteen of these locations.
+
+13
+00:00:26,157 --> 00:00:28,571
+Today there are more than six hundred points of
+
+14
+00:00:28,571 --> 00:00:30,554
+presence, in over a hundred cities.
+
+15
+00:00:31,304 --> 00:00:33,464
+Here is the journey of one request.
+
+16
+00:00:33,464 --> 00:00:36,260
+Your phone asks DNS where the file lives.
+
+17
+00:00:36,460 --> 00:00:38,714
+DNS answers with a nearby edge location,
+
+18
+00:00:38,714 --> 00:00:41,082
+the one that should be fastest for you.
+
+19
+00:00:41,282 --> 00:00:43,041
+The edge checks its cache.
+
+20
+00:00:43,041 --> 00:00:44,381
+If the file is there,
+
+21
+00:00:44,381 --> 00:00:45,219
+that is a hit,
+
+22
+00:00:45,219 --> 00:00:46,558
+and you are done.
+
+23
+00:00:46,758 --> 00:00:47,502
+If it is not,
+
+24
+00:00:47,502 --> 00:00:48,412
+that is a miss.
+
+25
+00:00:48,412 --> 00:00:50,811
+The edge asks a regional edge cache,
+
+26
+00:00:50,811 --> 00:00:52,880
+a bigger shelf one layer up.
+
+27
+00:00:53,080 --> 00:00:56,157
+Still nothing? Only then does the request travel all
+
+28
+00:00:56,157 --> 00:00:57,624
+the way to the origin.
+
+29
+00:00:57,824 --> 00:00:59,717
+The origin sends the file back,
+
+30
+00:00:59,717 --> 00:01:02,315
+and every layer on the way keeps a copy.
+
+31
+00:01:02,515 --> 00:01:04,662
+The next viewer in Mumbai gets a hit.
+
+32
+00:01:05,012 --> 00:01:07,065
+And if a thousand people ask at once,
+
+33
+00:01:07,065 --> 00:01:10,109
+CloudFront merges them into a single request to the
+
+34
+00:01:10,109 --> 00:01:10,784
+origin.
+
+35
+00:01:11,534 --> 00:01:13,968
+Each copy stays fresh for a set time.
+
+36
+00:01:13,968 --> 00:01:16,819
+When it expires, the edge checks again.
+
+37
+00:01:17,019 --> 00:01:18,430
+The origin works less.
+
+38
+00:01:18,430 --> 00:01:20,090
+The viewer waits less.
+
+39
+00:01:20,290 --> 00:01:22,666
+The video was never really in Virginia.
+
+40
+00:01:22,666 --> 00:01:24,401
+It was already next door.

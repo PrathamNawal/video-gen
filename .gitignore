@@ -10,3 +10,12 @@ dhoni/audio/trimmed/
 dhoni/assets/prep/
 __pycache__/
 *.pyc
+cloudfront/out/*
+!cloudfront/out/closer_share.mp4
+!cloudfront/out/closer.srt
+cloudfront/audio/takes/
+cloudfront/audio/lines/
+cloudfront/audio/trimmed/
+cloudfront/audio/*.wav
+cloudfront/assets/prep/
+cloudfront/assets/data/*.json
