@@ -1,0 +1,142 @@
+{
+ "duration": 51.708,
+ "cues": [
+  {
+   "type": "whoosh",
+   "t": 0.233,
+   "gain": 0.46
+  },
+  {
+   "type": "pop",
+   "t": 0.95,
+   "gain": 0.6
+  },
+  {
+   "type": "whoosh",
+   "t": 4.24,
+   "gain": 0.4
+  },
+  {
+   "type": "pop",
+   "t": 4.49,
+   "gain": 0.6
+  },
+  {
+   "type": "stamp",
+   "t": 6.506,
+   "gain": 1.0
+  },
+  {
+   "type": "whoosh",
+   "t": 7.424,
+   "gain": 0.4
+  },
+  {
+   "type": "pop",
+   "t": 7.674,
+   "gain": 0.6
+  },
+  {
+   "type": "whoosh",
+   "t": 12.014,
+   "gain": 0.4
+  },
+  {
+   "type": "pencil",
+   "t": 13.559,
+   "gain": 0.6,
+   "dur": 0.5
+  },
+  {
+   "type": "pop",
+   "t": 15.258,
+   "gain": 0.6
+  },
+  {
+   "type": "pop",
+   "t": 17.128,
+   "gain": 0.6
+  },
+  {
+   "type": "pop",
+   "t": 18.731,
+   "gain": 0.6
+  },
+  {
+   "type": "stamp",
+   "t": 21.238,
+   "gain": 1.0
+  },
+  {
+   "type": "whoosh",
+   "t": 22.364,
+   "gain": 0.4
+  },
+  {
+   "type": "pop",
+   "t": 22.914,
+   "gain": 0.6
+  },
+  {
+   "type": "ticks",
+   "t": 28.261,
+   "gain": 0.6
+  },
+  {
+   "type": "pop",
+   "t": 29.724,
+   "gain": 0.6
+  },
+  {
+   "type": "pop",
+   "t": 30.198,
+   "gain": 0.6
+  },
+  {
+   "type": "pop",
+   "t": 32.683,
+   "gain": 0.6
+  },
+  {
+   "type": "ticks",
+   "t": 35.17,
+   "gain": 0.6
+  },
+  {
+   "type": "whoosh",
+   "t": 36.775,
+   "gain": 0.4
+  },
+  {
+   "type": "pop",
+   "t": 37.025,
+   "gain": 0.6
+  },
+  {
+   "type": "whoosh",
+   "t": 39.55,
+   "gain": 0.4
+  },
+  {
+   "type": "pop",
+   "t": 39.6,
+   "gain": 0.6
+  },
+  {
+   "type": "whoosh",
+   "t": 40.075,
+   "gain": 0.4
+  },
+  {
+   "type": "pop",
+   "t": 40.475,
+   "gain": 0.6
+  },
+  {
+   "type": "pop",
+   "t": 43.282,
+   "gain": 0.6
+  }
+ ],
+ "room_tone": []
+}

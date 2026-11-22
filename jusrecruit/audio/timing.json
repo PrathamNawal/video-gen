@@ -1,0 +1,134 @@
+{
+  "total_duration": 51.708,
+  "lead_in": 0.9,
+  "tail_out": 3.0,
+  "tempo": 1.0,
+  "segments": [
+    {
+      "id": 1,
+      "scene": "T01_problem",
+      "caption": "Your applicant tracking system tracks every candidate.",
+      "vo": "Your applicant tracking system tracks every candidate.",
+      "start": 0.9,
+      "end": 3.99,
+      "duration": 3.09
+    },
+    {
+      "id": 2,
+      "scene": "T01_problem",
+      "caption": "And your recruiters still do the work by hand.",
+      "vo": "And your recruiters still do the work by hand.",
+      "start": 4.44,
+      "end": 6.824,
+      "duration": 2.384
+    },
+    {
+      "id": 3,
+      "scene": "T01_problem",
+      "caption": "Hundreds of applicants. Hundreds of identical phone screens.",
+      "vo": "Hundreds of applicants. Hundreds of identical phone screens.",
+      "start": 7.624,
+      "end": 11.514,
+      "duration": 3.891
+    },
+    {
+      "id": 4,
+      "scene": "T02_reveal",
+      "caption": "JusRecruit is an Agentic ATS.",
+      "vo": "JusRecruit is an Agentic ATS.",
+      "start": 12.514,
+      "end": 14.408,
+      "duration": 1.894
+    },
+    {
+      "id": 5,
+      "scene": "T02_reveal",
+      "caption": "The AI does the screening and the first-round interviews.",
+      "vo": "The AI does the screening and the first-round interviews.",
+      "start": 15.208,
+      "end": 18.231,
+      "duration": 3.023
+    },
+    {
+      "id": 6,
+      "scene": "T02_reveal",
+      "caption": "Your team keeps the pipeline, and every final decision.",
+      "vo": "Your team keeps the pipeline, and every final decision.",
+      "start": 18.681,
+      "end": 21.864,
+      "duration": 3.183
+    },
+    {
+      "id": 7,
+      "scene": "T03_proofs",
+      "caption": "The phone screener calls every applicant, any hour, in their language.",
+      "vo": "The phone screener calls every applicant, any hour, in their language.",
+      "start": 22.864,
+      "end": 26.658,
+      "duration": 3.794
+    },
+    {
+      "id": 8,
+      "scene": "T03_proofs",
+      "caption": "Its setup takes under five minutes.",
+      "vo": "Its setup takes under five minutes.",
+      "start": 27.108,
+      "end": 29.224,
+      "duration": 2.116
+    },
+    {
+      "id": 9,
+      "scene": "T03_proofs",
+      "caption": "Meet Sai and Aina, your AI interviewers.",
+      "vo": "Meet Sai and Aina, your AI interviewers.",
+      "start": 29.674,
+      "end": 32.183,
+      "duration": 2.508
+    },
+    {
+      "id": 10,
+      "scene": "T03_proofs",
+      "caption": "They adapt every question, then hand back a score out of one hundred.",
+      "vo": "They adapt every question, then hand back a score out of one hundred.",
+      "start": 32.633,
+      "end": 36.525,
+      "duration": 3.892
+    },
+    {
+      "id": 11,
+      "scene": "T03_proofs",
+      "caption": "With a full transcript, and a replay.",
+      "vo": "With a full transcript, and a replay.",
+      "start": 36.975,
+      "end": 39.15,
+      "duration": 2.175
+    },
+    {
+      "id": 12,
+      "scene": "T04_close",
+      "caption": "Job post to offer letter, in one place.",
+      "vo": "Job post to offer letter, in one place.",
+      "start": 40.15,
+      "end": 42.432,
+      "duration": 2.283
+    },
+    {
+      "id": 13,
+      "scene": "T04_close",
+      "caption": "Start free. Post unlimited jobs.",
+      "vo": "Start free. Post unlimited jobs.",
+      "start": 43.232,
+      "end": 45.529,
+      "duration": 2.297
+    },
+    {
+      "id": 14,
+      "scene": "T04_close",
+      "caption": "Your ATS should do more than track candidates.",
+      "vo": "Your ATS should do more than track candidates.",
+      "start": 45.979,
+      "end": 48.708,
+      "duration": 2.728
+    }
+  ]
+}

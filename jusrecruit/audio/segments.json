@@ -1,0 +1,102 @@
+{
+ "segments": [
+  {
+   "id": 1,
+   "scene": "T01_problem",
+   "caption": "Your applicant tracking system tracks every candidate.",
+   "vo": "Your applicant tracking system tracks every candidate.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 2,
+   "scene": "T01_problem",
+   "caption": "And your recruiters still do the work by hand.",
+   "vo": "And your recruiters still do the work by hand.",
+   "gap_after": 0.8
+  },
+  {
+   "id": 3,
+   "scene": "T01_problem",
+   "caption": "Hundreds of applicants. Hundreds of identical phone screens.",
+   "vo": "Hundreds of applicants. Hundreds of identical phone screens.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 4,
+   "scene": "T02_reveal",
+   "caption": "JusRecruit is an Agentic ATS.",
+   "vo": "JusRecruit is an Agentic ATS.",
+   "gap_after": 0.8
+  },
+  {
+   "id": 5,
+   "scene": "T02_reveal",
+   "caption": "The AI does the screening and the first-round interviews.",
+   "vo": "The AI does the screening and the first-round interviews.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 6,
+   "scene": "T02_reveal",
+   "caption": "Your team keeps the pipeline, and every final decision.",
+   "vo": "Your team keeps the pipeline, and every final decision.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 7,
+   "scene": "T03_proofs",
+   "caption": "The phone screener calls every applicant, any hour, in their language.",
+   "vo": "The phone screener calls every applicant, any hour, in their language.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 8,
+   "scene": "T03_proofs",
+   "caption": "Its setup takes under five minutes.",
+   "vo": "Its setup takes under five minutes.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 9,
+   "scene": "T03_proofs",
+   "caption": "Meet Sai and Aina, your AI interviewers.",
+   "vo": "Meet Sai and Aina, your AI interviewers.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 10,
+   "scene": "T03_proofs",
+   "caption": "They adapt every question, then hand back a score out of one hundred.",
+   "vo": "They adapt every question, then hand back a score out of one hundred.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 11,
+   "scene": "T03_proofs",
+   "caption": "With a full transcript, and a replay.",
+   "vo": "With a full transcript, and a replay.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 12,
+   "scene": "T04_close",
+   "caption": "Job post to offer letter, in one place.",
+   "vo": "Job post to offer letter, in one place.",
+   "gap_after": 0.8
+  },
+  {
+   "id": 13,
+   "scene": "T04_close",
+   "caption": "Start free. Post unlimited jobs.",
+   "vo": "Start free. Post unlimited jobs.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 14,
+   "scene": "T04_close",
+   "caption": "Your ATS should do more than track candidates.",
+   "vo": "Your ATS should do more than track candidates.",
+   "gap_after": 1.0
+  }
+ ]
+}

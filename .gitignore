@@ -1,0 +1,6 @@
+jusrecruit/out/*
+!jusrecruit/out/jusrecruit_film_720p.mp4
+jusrecruit/audio/takes/
+jusrecruit/audio/lines/
+jusrecruit/audio/trimmed/
+__pycache__/
