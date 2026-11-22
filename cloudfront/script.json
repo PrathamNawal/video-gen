@@ -1,0 +1,78 @@
+{
+ "title": "Closer",
+ "takes": [
+  {"take": "T01_problem", "lines": [
+   {"id": 1, "text": "You press play in Mumbai. The video lives on a server in Virginia.",
+    "spoken": "You press play in Mumbai. The video lives on a server in Virginia.",
+    "hero": "globe: a glowing dot in Mumbai, a dot in Virginia, an arc drawing across the ocean", "typed": "MUMBAI → VIRGINIA", "gap_after": 0.3},
+   {"id": 2, "text": "That is almost thirteen thousand kilometres away.",
+    "spoken": "That is almost thirteen thousand kilometres away.",
+    "hero": "the arc stretches; a distance counter rolls up", "typed": "12,855 KM"},
+   {"id": 3, "text": "Even at the speed of light in fibre, the round trip takes over a tenth of a second.",
+    "spoken": "Even at the speed of light in fibre, the round trip takes over a tenth of a second.",
+    "hero": "a light pulse runs out along the arc and back; a stopwatch counts", "typed": "130 ms+"},
+   {"id": 4, "text": "Amazon CloudFront exists to shorten that trip.",
+    "spoken": "Amazon CloudFront exists to shorten that trip.",
+    "hero": "the arc snaps short; the title lands", "typed": "CLOSER", "gap_after": 0.8}
+  ]},
+  {"take": "T02_idea", "lines": [
+   {"id": 5, "text": "The idea is simple. Do not make the file travel. Put a copy near the viewer.",
+    "spoken": "The idea is simple. Do not make the file travel. Put a copy near the viewer.",
+    "hero": "one file icon in Virginia splits into copies that fly out to cities", "typed": "COPY → NEAR YOU"},
+   {"id": 6, "text": "In two thousand eight, CloudFront launched with fourteen of these locations.",
+    "spoken": "In two thousand eight, CloudFront launched with fourteen of these locations.",
+    "hero": "fourteen glowing dots on the globe (8 US, 4 Europe, 2 Asia); counter", "typed": "2008 · 14"},
+   {"id": 7, "text": "Today there are more than six hundred points of presence, in over a hundred cities.",
+    "spoken": "Today there are more than six hundred points of presence, in over a hundred cities.",
+    "hero": "the globe floods with dots; counter rolls up", "typed": "600+"}
+  ]},
+  {"take": "T03_request", "lines": [
+   {"id": 8, "text": "Here is the journey of one request. Your phone asks DNS where the file lives.",
+    "spoken": "Here is the journey of one request. Your phone asks DNS where the file lives.",
+    "hero": "phone illustration; a DNS lookup card slides in beside it", "typed": "DNS"},
+   {"id": 9, "text": "DNS answers with a nearby edge location, the one that should be fastest for you.",
+    "spoken": "DNS answers with a nearby edge location, the one that should be fastest for you.",
+    "hero": "the phone's request lights up the nearest edge among several; the others dim", "typed": "NEAREST EDGE"},
+   {"id": 10, "text": "The edge checks its cache. If the file is there, that is a hit, and you are done.",
+    "spoken": "The edge checks its cache. If the file is there, that is a hit, and you are done.",
+    "hero": "edge rack with shelves; the file is on a shelf; green stamp; file flies back to phone", "typed": "CACHE HIT"},
+   {"id": 11, "text": "If it is not, that is a miss. The edge asks a regional edge cache, a bigger shelf one layer up.",
+    "spoken": "If it is not, that is a miss. The edge asks a regional edge cache, a bigger shelf one layer up.",
+    "hero": "empty shelf; red stamp; request climbs to a larger regional cache", "typed": "CACHE MISS"},
+   {"id": 12, "text": "Still nothing? Only then does the request travel all the way to the origin.",
+    "spoken": "Still nothing? Only then does the request travel all the way to the origin.",
+    "hero": "the long arc to Virginia lights up; the origin server glows", "typed": "ORIGIN"},
+   {"id": 13, "text": "The origin sends the file back, and every layer on the way keeps a copy.",
+    "spoken": "The origin sends the file back, and every layer on the way keeps a copy.",
+    "hero": "the file travels back; copies drop onto the regional and edge shelves", "typed": ""},
+   {"id": 14, "text": "The next viewer in Mumbai gets a hit.",
+    "spoken": "The next viewer in Mumbai gets a hit.",
+    "hero": "a second phone asks; the file flies from the nearby shelf almost instantly", "typed": "HIT", "gap_after": 0.6},
+   {"id": 15, "text": "And if a thousand people ask at once, CloudFront merges them into a single request to the origin.",
+    "spoken": "And if a thousand people ask at once, CloudFront merges them into a single request to the origin.",
+    "hero": "a crowd of request dots funnel into one line to the origin", "typed": "1,000 → 1"}
+  ]},
+  {"take": "T04_close", "lines": [
+   {"id": 16, "text": "Each copy stays fresh for a set time. When it expires, the edge checks again.",
+    "spoken": "Each copy stays fresh for a set time. When it expires, the edge checks again.",
+    "hero": "a countdown ring on the shelf copy; it empties, then refills", "typed": "TTL"},
+   {"id": 17, "text": "The origin works less. The viewer waits less.",
+    "spoken": "The origin works less. The viewer waits less.",
+    "hero": "two bars shrink side by side", "typed": "LESS LOAD · LESS WAIT"},
+   {"id": 18, "text": "The video was never really in Virginia. It was already next door.",
+    "spoken": "The video was never really in Virginia. It was already next door.",
+    "hero": "pull back over the whole globe: the long arc fades, the short arc stays bright", "typed": ""}
+  ]}
+ ],
+ "fact_notes": [
+  "Mumbai to Ashburn, Virginia great-circle distance is about 12,855 km (computed from coordinates 19.08N 72.88E and 39.04N 77.49W). Ashburn is used as a representative Virginia location; a real origin could be anywhere.",
+  "Light in optical fibre travels at about 200,000 km/s, so 12,855 km is about 64 ms one way and about 129 ms round trip at the very least (physics, before routing and processing).",
+  "CloudFront launched in November 2008 with 14 edge locations: 8 in the US, 4 in Europe, 2 in Asia (AWS Networking & Content Delivery blog, '98, 99, 100 CloudFront Points of Presence', and the 15th anniversary post).",
+  "AWS describes the network as more than 600 points of presence and 13 regional edge caches in more than 100 cities across 50 countries (AWS blog). Wikipedia cites a higher number (1600+, May 2025), which conflicts, so the film says 'more than six hundred'.",
+  "Request routing: DNS routes the request to the point of presence that can best serve it, typically the nearest edge by latency (AWS CloudFront Developer Guide, 'How CloudFront delivers content').",
+  "Cache hierarchy: edge checks its cache, on a miss goes to the regional edge cache, then to the origin; the object is cached at the regional edge cache and the edge on the way back (same Developer Guide page).",
+  "Request collapsing: simultaneous viewer requests for the same file at an edge are collapsed into a single request to the origin (same Developer Guide page).",
+  "Caveat left out of the film for brevity: dynamic requests and PUT/POST/PATCH/OPTIONS/DELETE methods skip the regional edge cache and go straight to the origin. Cache lifetime is controlled by TTL settings and cache-control headers.",
+  "'Regional edge caches' were announced at re:Invent 2016 (AWS blog); not part of the 2008 launch, which the film does not claim."
+ ]
+}
