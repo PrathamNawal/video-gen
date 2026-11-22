@@ -1,0 +1,170 @@
+{
+  "total_duration": 87.151,
+  "lead_in": 0.9,
+  "tail_out": 3.0,
+  "tempo": 1.0,
+  "segments": [
+    {
+      "id": 1,
+      "scene": "T01_problem",
+      "caption": "You press play in Mumbai. The video lives on a server in Virginia.",
+      "vo": "You press play in Mumbai. The video lives on a server in Virginia.",
+      "start": 0.9,
+      "end": 4.69,
+      "duration": 3.79
+    },
+    {
+      "id": 2,
+      "scene": "T01_problem",
+      "caption": "That is almost thirteen thousand kilometres away.",
+      "vo": "That is almost thirteen thousand kilometres away.",
+      "start": 4.99,
+      "end": 7.534,
+      "duration": 2.544
+    },
+    {
+      "id": 3,
+      "scene": "T01_problem",
+      "caption": "Even at the speed of light in fibre, the round trip takes over a tenth of a second.",
+      "vo": "Even at the speed of light in fibre, the round trip takes over a tenth of a second.",
+      "start": 7.984,
+      "end": 12.32,
+      "duration": 4.335
+    },
+    {
+      "id": 4,
+      "scene": "T01_problem",
+      "caption": "Amazon CloudFront exists to shorten that trip.",
+      "vo": "Amazon CloudFront exists to shorten that trip.",
+      "start": 12.77,
+      "end": 15.65,
+      "duration": 2.88
+    },
+    {
+      "id": 5,
+      "scene": "T02_idea",
+      "caption": "The idea is simple. Do not make the file travel. Put a copy near the viewer.",
+      "vo": "The idea is simple. Do not make the file travel. Put a copy near the viewer.",
+      "start": 16.45,
+      "end": 21.041,
+      "duration": 4.592
+    },
+    {
+      "id": 6,
+      "scene": "T02_idea",
+      "caption": "In two thousand eight, CloudFront launched with fourteen of these locations.",
+      "vo": "In two thousand eight, CloudFront launched with fourteen of these locations.",
+      "start": 21.491,
+      "end": 25.707,
+      "duration": 4.215
+    },
+    {
+      "id": 7,
+      "scene": "T02_idea",
+      "caption": "Today there are more than six hundred points of presence, in over a hundred cities.",
+      "vo": "Today there are more than six hundred points of presence, in over a hundred cities.",
+      "start": 26.157,
+      "end": 30.304,
+      "duration": 4.147
+    },
+    {
+      "id": 8,
+      "scene": "T03_request",
+      "caption": "Here is the journey of one request. Your phone asks DNS where the file lives.",
+      "vo": "Here is the journey of one request. Your phone asks DNS where the file lives.",
+      "start": 31.304,
+      "end": 36.01,
+      "duration": 4.706
+    },
+    {
+      "id": 9,
+      "scene": "T03_request",
+      "caption": "DNS answers with a nearby edge location, the one that should be fastest for you.",
+      "vo": "DNS answers with a nearby edge location, the one that should be fastest for you.",
+      "start": 36.46,
+      "end": 40.832,
+      "duration": 4.372
+    },
+    {
+      "id": 10,
+      "scene": "T03_request",
+      "caption": "The edge checks its cache. If the file is there, that is a hit, and you are done.",
+      "vo": "The edge checks its cache. If the file is there, that is a hit, and you are done.",
+      "start": 41.282,
+      "end": 46.308,
+      "duration": 5.026
+    },
+    {
+      "id": 11,
+      "scene": "T03_request",
+      "caption": "If it is not, that is a miss. The edge asks a regional edge cache, a bigger shelf one layer up.",
+      "vo": "If it is not, that is a miss. The edge asks a regional edge cache, a bigger shelf one layer up.",
+      "start": 46.758,
+      "end": 52.63,
+      "duration": 5.872
+    },
+    {
+      "id": 12,
+      "scene": "T03_request",
+      "caption": "Still nothing? Only then does the request travel all the way to the origin.",
+      "vo": "Still nothing? Only then does the request travel all the way to the origin.",
+      "start": 53.08,
+      "end": 57.374,
+      "duration": 4.294
+    },
+    {
+      "id": 13,
+      "scene": "T03_request",
+      "caption": "The origin sends the file back, and every layer on the way keeps a copy.",
+      "vo": "The origin sends the file back, and every layer on the way keeps a copy.",
+      "start": 57.824,
+      "end": 62.065,
+      "duration": 4.241
+    },
+    {
+      "id": 14,
+      "scene": "T03_request",
+      "caption": "The next viewer in Mumbai gets a hit.",
+      "vo": "The next viewer in Mumbai gets a hit.",
+      "start": 62.515,
+      "end": 64.412,
+      "duration": 1.897
+    },
+    {
+      "id": 15,
+      "scene": "T03_request",
+      "caption": "And if a thousand people ask at once, CloudFront merges them into a single request to the origin.",
+      "vo": "And if a thousand people ask at once, CloudFront merges them into a single request to the origin.",
+      "start": 65.012,
+      "end": 70.534,
+      "duration": 5.522
+    },
+    {
+      "id": 16,
+      "scene": "T04_close",
+      "caption": "Each copy stays fresh for a set time. When it expires, the edge checks again.",
+      "vo": "Each copy stays fresh for a set time. When it expires, the edge checks again.",
+      "start": 71.534,
+      "end": 76.569,
+      "duration": 5.036
+    },
+    {
+      "id": 17,
+      "scene": "T04_close",
+      "caption": "The origin works less. The viewer waits less.",
+      "vo": "The origin works less. The viewer waits less.",
+      "start": 77.019,
+      "end": 79.84,
+      "duration": 2.821
+    },
+    {
+      "id": 18,
+      "scene": "T04_close",
+      "caption": "The video was never really in Virginia. It was already next door.",
+      "vo": "The video was never really in Virginia. It was already next door.",
+      "start": 80.29,
+      "end": 84.151,
+      "duration": 3.861
+    }
+  ]
+}

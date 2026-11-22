@@ -1,0 +1,130 @@
+{
+ "segments": [
+  {
+   "id": 1,
+   "scene": "T01_problem",
+   "caption": "You press play in Mumbai. The video lives on a server in Virginia.",
+   "vo": "You press play in Mumbai. The video lives on a server in Virginia.",
+   "gap_after": 0.3
+  },
+  {
+   "id": 2,
+   "scene": "T01_problem",
+   "caption": "That is almost thirteen thousand kilometres away.",
+   "vo": "That is almost thirteen thousand kilometres away.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 3,
+   "scene": "T01_problem",
+   "caption": "Even at the speed of light in fibre, the round trip takes over a tenth of a second.",
+   "vo": "Even at the speed of light in fibre, the round trip takes over a tenth of a second.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 4,
+   "scene": "T01_problem",
+   "caption": "Amazon CloudFront exists to shorten that trip.",
+   "vo": "Amazon CloudFront exists to shorten that trip.",
+   "gap_after": 0.8
+  },
+  {
+   "id": 5,
+   "scene": "T02_idea",
+   "caption": "The idea is simple. Do not make the file travel. Put a copy near the viewer.",
+   "vo": "The idea is simple. Do not make the file travel. Put a copy near the viewer.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 6,
+   "scene": "T02_idea",
+   "caption": "In two thousand eight, CloudFront launched with fourteen of these locations.",
+   "vo": "In two thousand eight, CloudFront launched with fourteen of these locations.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 7,
+   "scene": "T02_idea",
+   "caption": "Today there are more than six hundred points of presence, in over a hundred cities.",
+   "vo": "Today there are more than six hundred points of presence, in over a hundred cities.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 8,
+   "scene": "T03_request",
+   "caption": "Here is the journey of one request. Your phone asks DNS where the file lives.",
+   "vo": "Here is the journey of one request. Your phone asks DNS where the file lives.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 9,
+   "scene": "T03_request",
+   "caption": "DNS answers with a nearby edge location, the one that should be fastest for you.",
+   "vo": "DNS answers with a nearby edge location, the one that should be fastest for you.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 10,
+   "scene": "T03_request",
+   "caption": "The edge checks its cache. If the file is there, that is a hit, and you are done.",
+   "vo": "The edge checks its cache. If the file is there, that is a hit, and you are done.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 11,
+   "scene": "T03_request",
+   "caption": "If it is not, that is a miss. The edge asks a regional edge cache, a bigger shelf one layer up.",
+   "vo": "If it is not, that is a miss. The edge asks a regional edge cache, a bigger shelf one layer up.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 12,
+   "scene": "T03_request",
+   "caption": "Still nothing? Only then does the request travel all the way to the origin.",
+   "vo": "Still nothing? Only then does the request travel all the way to the origin.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 13,
+   "scene": "T03_request",
+   "caption": "The origin sends the file back, and every layer on the way keeps a copy.",
+   "vo": "The origin sends the file back, and every layer on the way keeps a copy.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 14,
+   "scene": "T03_request",
+   "caption": "The next viewer in Mumbai gets a hit.",
+   "vo": "The next viewer in Mumbai gets a hit.",
+   "gap_after": 0.6
+  },
+  {
+   "id": 15,
+   "scene": "T03_request",
+   "caption": "And if a thousand people ask at once, CloudFront merges them into a single request to the origin.",
+   "vo": "And if a thousand people ask at once, CloudFront merges them into a single request to the origin.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 16,
+   "scene": "T04_close",
+   "caption": "Each copy stays fresh for a set time. When it expires, the edge checks again.",
+   "vo": "Each copy stays fresh for a set time. When it expires, the edge checks again.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 17,
+   "scene": "T04_close",
+   "caption": "The origin works less. The viewer waits less.",
+   "vo": "The origin works less. The viewer waits less.",
+   "gap_after": 0.45
+  },
+  {
+   "id": 18,
+   "scene": "T04_close",
+   "caption": "The video was never really in Virginia. It was already next door.",
+   "vo": "The video was never really in Virginia. It was already next door.",
+   "gap_after": 1.0
+  }
+ ]
+}
